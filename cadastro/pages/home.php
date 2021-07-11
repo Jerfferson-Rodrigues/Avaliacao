@@ -5,9 +5,9 @@
         User::deletar('admin.usuarios',$idExcluir);
     } 
 ?>
-<div class="box-content w100 ">
+<div class="box-content ">
 <h2> Lista de Usuários</h2>
-    <div class="table-responsive">
+    <div class="table-responsive wraper">
     <table>
         <tr>
             <td>Nome</td>

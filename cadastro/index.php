@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="<?php echo INCLUDE_PATH_USER ?>./css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo INCLUDE_PATH_USER ?>./css/style.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH_USER ?>./css/stylee.css">
     <title>cadastro</title>
 </head>
 <body>
