@@ -1,5 +1,5 @@
 <?php
-    include('../config.php');
+    include('config.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -7,8 +7,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="<?php echo INCLUDE_PATH_USER ?>./css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH_USER ?>./css/style.css">
     <title>cadastro</title>
 </head>
 <body>
@@ -16,7 +17,7 @@
         <div class="center">
             <nav class="desktop right">
                 <ul>
-                    <li><a href="<?php echo INCLUDE_PATH_USER ?>"> <span class="fa fa-home">Home</span></a></li>
+                    <li><a href="<?php echo INCLUDE_PATH_USER ?>"> <span class="fa fa-home"></span></a></li>
                     <li><a href="adicionar-usuario">Novo Usuario</a></li>
                     
                 </ul>
@@ -32,5 +33,7 @@
     
 </div><!--content-->
 
+<script src="<?php echo INCLUDE_PATH_USER ?>js/jquery.mask.js"></script>
+<script src="<?php echo INCLUDE_PATH_USER ?>js/main.js"></script>
 </body>
 </html>

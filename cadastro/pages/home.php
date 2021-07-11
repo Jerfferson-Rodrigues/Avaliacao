@@ -1,31 +1,40 @@
+<?php
+    // chamada para excluir
+    if(isset($_GET['excluir'])){
+        $idExcluir = intval($_GET['excluir']);
+        User::deletar('admin.usuarios',$idExcluir);
+    } 
+?>
 <div class="box-content w100 ">
-<h2><i class="fas fa-globe"></i> Lista de Usuário</h2>
+<h2> Lista de Usuários</h2>
     <div class="table-responsive">
-        <div class="row">
-            <div class="col">
-                <span>Nome</span>
-            </div><!--col-->
-            <div class="col">
-                <span>CPF/CNPJ</span>
-            </div><!--col-->
-            <div class="col">
-                <span>Telefone</span>
-            </div><!--col-->
-            
-            <div class="clear"></div>
-        </div><!--row-->
+    <table>
+        <tr>
+            <td>Nome</td>
+            <td>Cpf</td>
+            <td>Telefone</td>  
+            <td>Editar</td>
+            <td>Excluir</td>
+        </tr>
 
-        <div class="row">
-            <div class="col">
-                <span>Nome</span>
-            </div><!--col-->
-            <div class="col">
-                <span>CPF/CNPJ</span>
-            </div><!--col-->
-            <div class="col">
-                <span>Telefone</span>
-            </div><!--col-->
-            <div class="clear"></div>
-        </div><!--row-->
+        <?php
+            $usuarioHome = Mysql::conectar()->prepare("SELECT * FROM `admin.usuarios`");
+            $usuarioHome->execute();
+            $usuarioHome = $usuarioHome->fetchAll();
+            foreach($usuarioHome as $key => $value){
+        ?>
+
+        <tr>
+            <td><span><?php echo $value['nome'] ?></span></td>
+            <td><span><?php echo $value['cpf'] ?></span></td>
+            <td><span><?php echo $value['telefone'] ?></span></td>
+            <td><div><a class="edit" href="<?php echo INCLUDE_PATH_USER ?>editar-usuario?id=<?php echo $value['id']; ?>"><i class="fas fa-user-edit"></i></a></div></td>
+            <td><div><a actionBtn="delete" class="btn delete" href="<?php echo INCLUDE_PATH_USER ?>home?excluir=<?php echo $value['id']; ?>"><i class="far fa-trash-alt"></i></a></div></td>
+
+        </tr>
+        
+        <?php }?>
+
+    </table>
     </div><!--table-responsive-->
 </div><!--box-content--> 
