@@ -1,7 +1,7 @@
 # Avaliacao
 softbuilder estagio
 
-## Executar o aqrquivo
+## Executar o arquivo
 * Após baixar a pasta avalicao
 * Baixe o aplicativo Xampp e vá `C:\xampp\htdocs` ou onde você salvou o aplicativo 
 * extraia o aqrquivo e salve a pasta avaliacao na pasta `htdocs`
