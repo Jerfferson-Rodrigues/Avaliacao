@@ -1,4 +1,4 @@
-# Cadastro de Usuarios
+# Cadastros de Usuarios
 
 ## Executar o arquivo
 * Após baixar a pasta avalicao
